@@ -1,0 +1,44 @@
+
+{% extends 'userbase.html' %}
+{% block body %}
+
+<h2>View Hospital Details</h2>
+<br>
+  
+<div class="container"  style="background-color: rgb(233, 243, 243);">
+ 
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Serial No.</th>
+        <th>Patient Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Admission Date</th>
+        <th>Discharge Date</th>
+        <th>Desease</th>
+        <th>Location</th>
+        <th>Zipcode</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+        <tr>
+
+          
+          <td>{{row['id']}}</td>
+          <td>{{row['uname']}}</td>
+          <td>{{row['uage']}}</td>
+          <td>{{row['ugender']}}</td>
+          <td>{{row['udate']}}</td>
+          <td>{{row['uddate']}}</td> 
+          <td>{{row['udesease']}}</td> 
+          <td>{{row['ulocation']}}</td> 
+          <td>{{row['uzipcode']}}</td> 
+        </tr>      
+        {% endfor %}  
+    </tbody>
+  </table>
+  
+{% endblock %}  

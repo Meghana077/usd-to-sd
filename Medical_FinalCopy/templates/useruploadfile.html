@@ -1,0 +1,59 @@
+{% extends 'userbase.html' %}
+{% block body %}
+<div id="contact" class="form" ">
+    <div class="container" >
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 style="color: white;">  FILE UPLOAD </h2>
+                
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                
+                <!-- Contact Form -->
+                <form  action="/success" method="POST" enctype="multipart/form-data">
+                    <div class="form-group" >
+                        <input type="file" class="form-control-input" style="height: 100px;" name="file" required >
+                        <label class="label-control" for="cname">Name</label>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <center>
+                    <div class="form-group">
+                        <button type="submit" class="form-control-submit-button" style="width: 400px;">UPLOAD</button>
+                    </div>
+             
+                
+            </center>
+                    
+                </form>
+                <form method=post action="/clear" >
+                   <center> <div class="form-group">
+                        <button type="submit" class="form-control-submit-button" style="width: 400px;">CLEAR DATA BEFORE UPLOADING A FILE</button>
+                    </div>
+                </center>
+                </form>
+                <!-- end of contact form -->
+
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <center>
+            <div><h6>{{msg}}</h6></div>
+        <table >
+            <tr><td>{{ name2 }}</td> </tr>
+            <tr><td>{{ age2 }}</td></tr>   
+            <tr><td>{{ gender }}</td> </tr>   
+            <tr><td>{{ date2 }}</td></tr>
+            <tr><td>{{ d_date2 }}</td> </tr>   
+            <tr><td>{{ desease }}</td>  </tr>
+            <tr><td>{{ location2 }}</td>  </tr>
+            <tr><td>{{ zipcode }}</td>  </tr>
+            
+       
+
+        </table>
+    </center>
+    </div> <!-- end of container -->
+</div> <!-- end of form -->
+<!-- end of contact -->
+{% endblock %}  
